@@ -3,23 +3,21 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>{{selectedItem.title}}</ion-title>
+    <ion-title>{{selectedGarage.title}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-card >
   <ion-card-header style="background-color: grey;font-style: italic;color:white">
-    {{selectedItem.title}}
+    {{selectedGarage.title}}
   </ion-card-header>
   <ion-card-content>
-    {{selectedItem.descript}}
+    {{selectedGarage.descript}}
   </ion-card-content>
 </ion-card>
 
     <div style="background-color: grey;font-style: italic;color:white;font-size: 18px;">Inscription</div>
-
-  
     <ion-item>
     <ion-label fixed>Nom</ion-label>
     <ion-input type="text" value=""></ion-input>

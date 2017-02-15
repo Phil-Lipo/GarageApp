@@ -8,10 +8,10 @@ import { NavController,NavParams } from 'ionic-angular';
   templateUrl: 'InfoGarage.html'
 })
 export class InfoGarage {
-    selectedItem: any;
+    selectedGarage: any;
   
      constructor(public navCtrl: NavController, public navParams: NavParams) {
-        this.selectedItem = navParams.get('item');
+        this.selectedGarage = navParams.get('garage');
      }
      
 }
