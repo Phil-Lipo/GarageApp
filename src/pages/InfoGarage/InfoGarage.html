@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{selectedItem.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card >
+  <ion-card-header style="background-color: grey;font-style: italic;color:white">
+    {{selectedItem.title}}
+  </ion-card-header>
+  <ion-card-content>
+    {{selectedItem.descript}}
+  </ion-card-content>
+</ion-card>
+
+    <div style="background-color: grey;font-style: italic;color:white">Inscription</div>
+
+  
+    <ion-item>
+    <ion-label fixed>Nom</ion-label>
+    <ion-input type="text" value=""></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed>Prenom</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <button ion-button full>M'inscrire</button>
+  
+</ion-content>
