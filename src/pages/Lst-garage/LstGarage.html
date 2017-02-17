@@ -10,12 +10,12 @@
 <ion-content>
   <ion-list>
 
-    <button ion-item *ngFor="let garage of garages" (click)="itemTapped($event, garage)" class="bouton">
+    <button ion-item *ngFor="let garage of Gestgarages.getGarages()" (click)="itemTapped($event, garage)" class="bouton">
       
       <ion-icon [name]="garage.icon" item-left></ion-icon>
       
       <div class="item-note" >
-        <h2>{{garage.title}}</h2>
+        <h2>{{garage.sujet}}</h2>
         <p>{{garage.descript}} </p>
       </div>
       

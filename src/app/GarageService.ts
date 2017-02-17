@@ -8,29 +8,41 @@ export class Garage {
   sujet: string;
   descript: string;
   date: string;
+  icon: string;
 
-  constructor(sujet: string, descript: string, id: number, date:string) {
+  constructor(id: number,sujet: string, descript: string, date:string,icon:string) {
     this.id = id;
     this.sujet = sujet;
     this.descript = descript;
     this.date = date;
+    this.icon = icon;
   }
 }
  
 @Injectable()
 export class GarageService {
+  id: number;
   database: SQLite = null;
+
+  garages: Garage[];
  
   // Init an empty DB if it does not exist by now!
-  constructor( private platform: Platform) {
-    this.database = new SQLite();
+  constructor() {
+    this.id = 0;
+    //this.database = new SQLite();
+    this.garages = [];
   }
  
   // Get all notes of our DB
-  public getNotes() {
-    return this.database.executeSql('SELECT * FROM notes', []);
+  public getGarages() {
+    return this.garages;
+    //return this.database.executeSql('SELECT * FROM notes', []);
   }
- 
+
+  public addGarage(sujet:string,descript: string,date:string,icon:string) {
+    this.garages.push(new Garage(this.id,sujet,descript,date,icon));
+    this.id++;
+  }
   // Save a new note to the DB
   // public saveNote(garage: Garage) {
   //    return this.database.executeSql('INSERT INTO notes (title, text) VALUES (?,?)', [note.title, note.text]);

@@ -1,12 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
-import { StatusBar, Splashscreen, SQLite } from 'ionic-native';
+import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { Accueil } from '../pages/Accueil/Accueil';
 import { LstGarage } from '../pages/Lst-garage/LstGarage';
-// import { InfoGarage } from '../pages/InfoGarage/InfoGarage';
-/*import { Page1 } from '../pages/page1/page1';
-import { Page2 } from '../pages/page2/page2';*/
+
 
 @Component({
   templateUrl: 'app.html'
@@ -31,16 +29,6 @@ export class MyApp {
   }
 
   initializeApp() {
-    this.platform.ready().then(() => {
-          SQLite.openDatabase({
-      name: 'data.db',
-      location: 'default'
-    }).then((db: SQLite) => {
-
-        db.executeSql('CREATE TABLE IF NOT EXISTS garages (id INTEGER PRIMARY KEY AUTOINCREMENT, sujet TEXT, descript TEXT, date TEXT', {}).then(() => {}).catch(() => {});
-
-      }).catch(error => console.error('Error opening database', error));
-    });
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       StatusBar.styleDefault();
