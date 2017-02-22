@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NavController,NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 
 
 @Component({
@@ -9,9 +9,15 @@ import { NavController,NavParams } from 'ionic-angular';
 })
 
 export class Connexion {
+
+    log = {}  
   
      constructor(public navCtrl: NavController ) {
        
      }
 
+     onSubmit() : void {
+       // https://ionicframework.com/docs/v2/resources/forms/
+       console.log('test')
+     }
 }

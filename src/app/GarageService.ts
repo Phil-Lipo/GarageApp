@@ -1,6 +1,4 @@
-import {Component} from '@angular/core';
-import {SQLite} from 'ionic-native';
-import {NavController, Platform} from 'ionic-angular';
+
 import {Injectable} from '@angular/core';
  
 export class Garage {
@@ -22,7 +20,6 @@ export class Garage {
 @Injectable()
 export class GarageService {
   id: number;
-  database: SQLite = null;
 
   garages: Garage[];
  

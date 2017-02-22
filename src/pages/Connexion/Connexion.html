@@ -8,16 +8,17 @@
 </ion-header>
 
 <ion-content>
-
+    <form (ngSubmit)="onSubmit()" role="form">
     <ion-item>
     <ion-label fixed>Email</ion-label>
-    <ion-input type="text" value=""></ion-input>
+    <ion-input id="email" [(ngModel)]="log.email" type="email" value="" required></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label fixed>Mot de passe</ion-label>
-    <ion-input type="password"></ion-input>
+    <ion-input id="pass" [(ngModel)]="log.pass" type="password" required></ion-input>
   </ion-item>
 
-  <button ion-button full >Se connecter</button>
+  <button type="submit" ion-button full >Se connecter</button>
+    </form>
 </ion-content>
