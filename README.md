@@ -6,3 +6,5 @@ Application de gestion du Garage multi-platform
 * Ionic
 * Angular 2
 * TypeScript
+* Javacsript
+* Html/css
